@@ -836,7 +836,7 @@ impl<'db> ClassLiteralType<'db> {
                         Some(Type::none(db)),
                     );
 
-                    return Symbol::bound(Type::Callable(CallableType::new(db, init_signature)))
+                    return Symbol::bound(Type::Callable(CallableType::single(db, init_signature)))
                         .into();
                 }
             }
